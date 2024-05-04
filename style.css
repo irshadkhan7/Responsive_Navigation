@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+
+    /* background-image: url(/poster.lop.jpg), url(); */
+    width: 98%;
+    height: 30px;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(240, 255, 23);
+    /* justify-content: space-between; */
+    display: flex;
+    color: rgb(210, 125, 13);
+}
+
+nav .logo{
+    font-size: 30px;
+    color: #12d5ee;
+    font-weight: 300;
+}
+ul li{
+    list-style: none;
+    display: inline-block;
+
+}  
+
+ul li a{
+    color: rgb(251, 47, 47);
+    font-size: 20px;
+    margin-left: 20px;
+    letter-spacing: 1px;
+    padding: 8px 10px;
+    border-radius: 5px;
+   
+}
+
+img{
+    width: 100%;
+    height: 680px;
+}
+
+ul li a:hover{
+    background-color: rgb(98, 130, 246);
+    width: 75px;
+    height: 40px;
+    color: rgb(208, 243, 11);
+}
+
+ul li a.active{
+color: hsl(56, 89%, 4%);
+background-color: #fff;
+}
+nav .menu-btn i{
+color: white;
+font-size: 20px;
+cursor: pointer;
+display: none;
+}
+
+#click{
+    display: none;
+}
+@media (max-width: 940px){
+
+    nav .menu-btn i{
+         margin-right: -300px;
+        display: block;
+        color: black;
+    }
+    #click:checked ~ .menu-btn i:before{
+        content: "\f00d";
+    }
+    nav ul{
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        background-color: rgb(219, 232, 244);
+        height: 100vh;
+        width: 100%;
+      transition: all 0.4s ease;
+    }
+    #click:checked ~ ul{
+        left: 0%;
+    }
+    nav ul li{
+        margin: 40px 0px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        display: block;
+
+    }
+     
+nav ul li a{
+font-size: 20px;
+}
+} 
+
